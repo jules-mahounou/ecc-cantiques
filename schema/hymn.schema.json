@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/jules-mahounou/ECC-Cantique/schema/hymn.schema.json",
+  "title": "Cantique",
+  "description": "Métadonnées (en-tête YAML) d'un cantique ECC-Cantique.",
+  "type": "object",
+  "required": ["id", "number", "language", "title"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifiant stable, repris de la base d'origine."
+    },
+    "number": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Numéro du cantique dans sa langue / son recueil."
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Langue du cantique (anglais, francais, goun, …)."
+    },
+    "title": {
+      "type": "string",
+      "description": "Titre du cantique."
+    },
+    "key": {
+      "type": "string",
+      "description": "Tonalité / clé musicale, vide si inconnue."
+    },
+    "source_side": {
+      "type": "string",
+      "description": "Métadonnée d'origine (left / right)."
+    },
+    "variant": {
+      "type": "string",
+      "description": "Étiquette de variante quand plusieurs cantiques partagent un même numéro (ex: v2, bis)."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

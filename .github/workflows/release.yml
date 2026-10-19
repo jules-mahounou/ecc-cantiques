@@ -1,0 +1,31 @@
+name: Release
+
+# Déclenché en poussant un tag de version, ex: git tag v1.0.0 && git push --tags
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - name: Valider puis construire le JSON
+        run: |
+          npm run validate
+          npm run build
+      - name: Publier la release avec cantiques.json
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/cantiques.json
+            dist/cantiques.by-language.json
+          generate_release_notes: true

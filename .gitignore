@@ -1,0 +1,14 @@
+# Dépendances
+node_modules/
+
+# Secrets / config locale (ne JAMAIS committer les clés)
+.env
+.env.local
+serviceAccount*.json
+
+# Sorties de build (générées — décommenter si tu préfères ne pas les versionner)
+# dist/
+
+# Divers
+.DS_Store
+*.log

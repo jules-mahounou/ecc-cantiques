@@ -1,0 +1,19 @@
+{
+  "name": "ecc-cantique",
+  "version": "0.1.0",
+  "description": "Dictionnaire open-source et collaboratif de cantiques (ECC), en plusieurs langues.",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Jules Mahounou",
+  "contributors": [
+    "Jules Mahounou (auteur & mainteneur)"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "gray-matter": "^4.0.3"
+  }
+}
