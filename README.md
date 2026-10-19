@@ -34,13 +34,13 @@ Aucun serveur, aucune inscription. Deux moyens recommandés :
 ```js
 // Dernière version publiée (un tag Git, ex: v1.0.0)
 const res = await fetch(
-  "https://cdn.jsdelivr.net/gh/<org>/ECC-Cantique@v1.0.0/dist/cantiques.json"
+  "https://cdn.jsdelivr.net/gh/jules-mahounou/ecc-cantiques@v1.0.0/dist/cantiques.json"
 );
 const { hymns } = await res.json();
 ```
 
-> Remplace `<org>` par le compte/organisation GitHub et le tag par la version voulue.
-> Épingler un tag précis (plutôt que `@main`) garantit une donnée stable et mise en cache.
+> Change le tag (`@v1.0.0`) pour la version voulue. Épingler un tag précis
+> (plutôt que `@main`) garantit une donnée stable et mise en cache par le CDN.
 
 ### 2. Via les GitHub Releases
 

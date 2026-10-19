@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/jules-mahounou/ECC-Cantique/schema/hymn.schema.json",
+  "$id": "https://github.com/jules-mahounou/ecc-cantiques/schema/hymn.schema.json",
   "title": "Cantique",
   "description": "Métadonnées (en-tête YAML) d'un cantique ECC-Cantique.",
   "type": "object",

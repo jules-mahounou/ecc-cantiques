@@ -13,8 +13,8 @@ ajouter un cantique ou une langue entière.
 ## 2. Pour une contribution plus large (en local)
 
 ```bash
-git clone https://github.com/<org>/ECC-Cantique.git
-cd ECC-Cantique
+git clone https://github.com/jules-mahounou/ecc-cantiques.git
+cd ecc-cantiques
 npm install
 
 # ... fais tes modifications dans hymns/ ...
